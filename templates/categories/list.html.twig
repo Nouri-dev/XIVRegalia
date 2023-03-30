@@ -1,0 +1,64 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ category.name }} | XIV REGALIA{% endblock %}
+
+{% block body %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+
+	<main>
+
+		<section class="articlelist">
+			  <div class="listtitre">
+          <h1>{{ category.name }}</h1>
+        </div>
+
+
+            {% for product in products %}
+
+        
+       
+              <article>
+                 <div class="divarticle">
+                    <img src="/uploads/{{ product.image }}" alt="{{ product.image }}" loading="lazy"  width="500" height="500" >
+
+                    <div class="listartname"> 
+                       <h4>{{ product.name }}</h4>
+                       <p>{{ product.price / 100}}€</p>
+                    </div>
+
+                    <div>
+                      <a href="{{ path('products_details', {'slug': product.slug }) }}">Acheter</a>
+                    </div>
+                      
+                     
+                  </div>
+           
+           
+              </article>
+
+     
+
+            {% endfor %}
+
+
+    </section>
+
+
+    </main>
+
+
+{% endblock %}

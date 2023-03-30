@@ -1,0 +1,122 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+.contactTitre {
+    background-color: $black;
+    padding: 30px;
+} 
+.contactTitre h1 {
+    text-align: center;
+    color: $creme;
+    word-wrap: break-word;
+}
+
+.contactCorp {
+    margin-top: 120px;
+}
+
+.contactCorp h2{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contactDeux {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.contactDeux p {
+    margin: 0 5px 0 5px;
+   
+}
+
+.contactNom , .contactMail, .contactMess {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-weight: 200;
+    font-size: 16px;
+   
+}
+.contactUn {
+    margin-bottom: 30px;
+}
+
+.nameCont {
+    padding: 3px 70px 3px 70px;
+    border: 1px solid $black;
+}
+
+.contentCont {
+    padding: 15px 290px 15px 290px;
+    border: 1px solid $black;
+}
+
+.contactTrois {
+    text-align: center;
+    margin-bottom: 270px;
+}
+
+@media screen and (max-width: 1024px) {
+    .contactDeux {
+       display: initial;
+    }
+    .contactDeux p {
+      margin-bottom: 10px;
+    }
+    .contentCont {
+        padding: 15px 70px 15px 70px;
+    }
+
+ }
+
+ @media screen and (max-width: 768px) {
+    .nameCont {
+        padding: 3px 30px 3px 30px;
+
+    }
+    .contentCont {
+        padding: 15px 30px 15px 30px;
+
+    }
+  }
+
+
+
+
+
+@media screen and (min-height: 1366px) {
+       
+    .contactCorp {
+        margin-top: 460px;
+    }
+
+
+    .contactTrois {
+    margin-bottom: 800px;
+    }
+
+
+    .nameCont {
+        padding: 10px 70px 10px 70px;
+        border: 3px solid $black;
+    }
+    .contentCont {
+        padding: 20px 290px 20px 290px;
+        border: 3px solid $black;
+    }
+}
+   
+   

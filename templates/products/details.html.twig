@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ product.name }}-{{ product.categories.name }} | XIV REGALIA{% endblock %}
+
+{% block body %}
+    
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+    <main>
+       
+        <section class="produitdetail">
+
+            <div class="produitdetailimg">
+                <img src="/uploads/{{ product.image }} " alt="{{ product.name }}" loading="lazy" width="700" height="700">
+            </div>
+
+
+            <div class="produitdetaildescri">
+              <div class="sousdetaildescri">   
+                <h1>{{ product.name }}</h1>
+                 {% if product.stock > 0 %}
+                    <a href="{{ path('cart_add', {id: product.id}) }}" class="bouttonblue">Ajouter au panier</a>
+                {% else %}
+                    <p class="rupturedetail">Temporairement en rupture de stock</p>
+                {% endif %}
+                <p>{{ product.categories.name }}</p>
+                <h4>{{ product.price / 100 }} €</h4>
+                <p class="descriptiondetail">{{ product.description }}</p>
+              
+              </div>
+            </div>
+
+        
+        </section>
+        
+    </main>
+{% endblock %}
+
+

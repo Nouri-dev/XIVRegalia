@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+{% block title %}Confirmation de commande | XIV REGALIA{% endblock %}
+
+{% block body %}
+
+<main>
+
+    <section class="paycomfirmtitre">
+		<h1>Confirmation de commande</h1>
+	</section>
+
+	<section class="paycomfirmhaut">
+	      <h2>Votre paiement a été traité avec succès !</h2>
+		  <img src= {{ asset('build/images/check-confirm.png') }}  alt="image de comfirmation de paiement" width="300" height="300">
+		  <p>XIV REGALIA vous remercie pour votre commande.</p>
+		  <p>Votre commande va vous être envoyée.</p>
+	</section>	  
+
+	
+
+
+   <section class="paycomfirmbas">  
+	
+	<div class="paycomfirmleft">
+		<h3>Votre commande sera livrée à cette adresse :</h3>
+        <p>Nom : {{ app.user.lastname }}</p>
+		<p>Ville : {{ app.user.city }}</p>
+		<p>Adresse : {{ app.user.address }}</p>
+		<p>Code postal : {{ app.user.zipcode }}</p>
+		<p>Pays : {{ app.user.country }}</p>
+		
+	</div>
+
+    <div class="paycomfirmright">
+		<h3>Récapitulatif et montant total de votre commande :</h3>
+
+		{% for element in dataPanier %} 
+		<div class="paycomfirmimg">  
+		<img src="/uploads/{{ element.product.image }} " alt="{{ element.product.name }}" width="60" height="60" loading="lazy">
+		<p>Article : {{ element.product.name}}<br>Qté : {{ element.quantity }}<br>
+		Prix : {{ element.product.price / 100}}€</p>
+		</div>
+		{% endfor %} 
+
+	
+
+		<div class="paycomfirmtotal">
+			<p>Montant de votre achat : {{ total / 100}} €</p>
+		</div>
+    </div> 
+
+	
+  </section>	
+	
+    
+	<div id="paycomfirmbout">
+	 <a href="{{ path('home.index') }}" class="bouttoncomfirmbleu">Retour à l'accueil</a>
+    </div>
+
+	
+
+</main>
+
+{% endblock %}

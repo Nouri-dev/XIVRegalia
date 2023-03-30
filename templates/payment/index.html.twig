@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace de paiement | XIV REGALIA{% endblock %}
+
+{% block body %}
+
+	<main>
+	
+		<section class="paymenttitre">
+			<h1>Espace de paiement et informations personnelles</h1>
+		</section>
+
+     <div class="paymentsection">  
+		<section class="paymentseccarte">
+
+			<h2>Espace paiement carte bancaire</h2>
+
+			<div>
+				
+				{{ form_start(formulaireBank ) }}
+				<p>{{ form_row(formulaireBank.cardnumber, {'attr': {'class': 'formuser'}} ) }}</p>
+				<p>{{ form_row(formulaireBank.carduser, {'attr': {'class': 'formuser'}} ) }}</p>
+		        <p>{{ form_row(formulaireBank.expiry, {'attr': {'class': 'formcarte'}}) }}</p>
+			    <p>{{ form_row(formulaireBank.cvc, {'attr': {'class': 'formcarte'}} ) }}</p>
+				<p>Veuillez indiquer vos informations bancaire</p>
+				<p>Le formulaire de paiement est fictif et ne récolte aucune donnée.</p>
+		    </div>
+
+        </section>
+
+
+	  <section class="paymentsecinfo">
+        <div>
+			<div class="paymenthdeu">
+				<h2>Informations livraison</h2>
+			</div>
+
+            <div class="paymentdivinfo">  
+			    <p>Adresse : {{ app.user.address }}<br>Ville : {{ app.user.city }}<br>Code postal : {{ app.user.zipcode }}
+				<br>Pays : {{ app.user.country }}</p>
+				<a href="{{ path('profile_index') }}" class="bouttonmodifier">Modifier</a>
+			</div>	
+
+		</div>
+
+
+		<div>
+			<div class="paymenthdeu">
+				<h2>Recaptulatif commande</h2>
+			</div>
+
+			
+				{% for element in dataPanier %}
+				<div class="paymentdivcommande">
+					<img src="/uploads/{{ element.product.image }} " alt="{{ element.product.name }}" width="60" height="60" loading="lazy">
+					<p>Article : {{ element.product.name}}<br>Qté : {{ element.quantity }}<br>
+					Prix : {{ element.product.price / 100}}€</p>
+				</div>	
+				{% endfor %}
+			
+		</div>
+
+
+		<div class="paymenttotal">
+			<p>Total commande : {{ total / 100}} €</p>
+		</div>
+
+
+	</section>
+  </div>
+
+
+            <div id="boutonpaye">
+			   <button type="submit" class="bouttoncomfirmbleu">Confirmer paiement</button>
+		    </div>
+
+
+		{{ form_end(formulaireBank) }}
+
+</main>
+
+
+{% endblock %}

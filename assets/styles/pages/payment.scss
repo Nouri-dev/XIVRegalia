@@ -1,0 +1,216 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+.paymenttitre {
+    background-color: $black;
+    padding: 30px;
+   
+   
+} 
+.paymenttitre h1 {
+    text-align: center;
+    color: $creme;
+}
+.paymentsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.paymentseccarte h2 {
+    background-color: $bleuf;
+    padding: 9px;
+    color: $creme;
+    margin-bottom: 50px;
+}
+.paymentseccarte {
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 50px;  
+  
+}
+
+
+.paymentsecinfo {
+    padding: 90px;
+    border-radius: 7px;
+    background-color: $creme;
+    width: 50%;
+    text-align: center;
+}
+
+.paymentsecinfo h2{
+    background-color: $bleuf;
+    padding: 6px;
+    color: $white;
+    margin-bottom: 40px;
+    border-radius: 7px;
+}
+
+
+.paymentdivinfo {
+    margin-bottom: 80px;
+}
+.paymentdivinfo p {
+    margin-bottom: 40px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    width: 200px;
+}
+.paymentdivinfo p {
+    justify-content: center;
+    width: 100%; 
+}
+
+
+
+/* payment div commande  */
+
+.paymentdivcommande {
+   display: flex;
+}
+.paymentdivcommande p{
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 170px;
+  width: 80px;
+}
+.paymentdivcommande img{
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+
+
+#boutonpaye {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: block;
+   text-align: center;
+}
+
+.paymenttotal p {
+    background-color: $bleuf;
+    padding: 6px;
+    color: $white;
+    font-weight: 400;
+    margin-top: 60px;
+   
+}
+  /* payment carte form */
+.paymentseccarte label, form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formuser {
+    width: 100%;
+    appearance: none;
+    padding-top: 5px;
+    padding-right: 50px; 
+    padding-bottom: 5px;
+    margin-top: 20px;
+    /* Firefox */
+      -moz-appearance: textfield;
+      appearance: none;
+   /* Chrome */
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          appearance: none;
+      }
+   /* Opéra*/
+      &::-o-inner-spin-button {
+          -o-appearance: none;
+          appearance: none;
+      }
+   
+  } 
+  
+  .formcarte {
+    width: 75%;
+    appearance: none;
+    padding-top: 5px;
+   
+    padding-bottom: 5px;
+    margin-top: 20px;
+    /* Firefox */
+      -moz-appearance: textfield;
+      appearance: none;
+   /* Chrome */
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          appearance: none;
+      }
+   /* Opéra*/
+      &::-o-inner-spin-button {
+          -o-appearance: none;
+          appearance: none;
+      }
+   
+  } 
+  
+  .forma {
+      font-size: 16px;
+      font-weight: 400;
+  }
+  
+  /* payment carte form */
+
+
+
+@media screen and (max-width: 1024px) { 
+
+    .paymentsection {
+        justify-content: center;
+    }
+    .paymentseccarte {
+        margin-left: unset;
+        margin-right: unset;
+     }
+    .paymentsecinfo {
+       width: 100%;
+      margin-right: unset;
+      text-align: center;  
+     margin-top: 20px;
+    } 
+    .paymentsecinfo h2{
+      font-size: $fsh3;
+    }  
+    .paymentdivinfo p {
+        justify-content: center;
+        width: 100%;
+    }
+
+ 
+  
+  
+
+ }
+ @media screen and (min-height: 1366px) { 
+    .paymentsection {
+        
+        margin-top: 300px;
+        margin-bottom: 180px;
+    }
+    #boutonpaye {
+        margin-bottom: 400px;
+        margin-top: 250px;
+        
+    }
+ }

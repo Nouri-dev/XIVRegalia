@@ -1,0 +1,123 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.cattitre {
+    background-color: $black;
+    padding: 25px;
+    margin-bottom: 10px;
+} 
+.cattitre h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: $creme;
+}
+.cattitre p {
+   color: $white;
+}
+
+
+.deuxcat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.catdroite {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.catgauche {
+   margin-left: 5px;
+   margin-right: 5px;
+}
+.catgauche a, .catdroite a, .catcentral a {
+  font-size: $fsh2;
+  display:block;
+  text-align: center; 
+  line-height: 400px;
+} 
+.catgauche a:hover, .catdroite a:hover, .catcentral a:hover {
+    color: $white;
+}
+.deuxcat .catgauche, .deuxcat .catdroite {
+   margin-bottom: 5px;
+   height: 400px;
+   width: 49%; 
+   max-width: 50%;
+   background-color: $black;
+} 
+.deuxcat .catgauche:hover, .deuxcat .catdroite:hover, .catcentral:hover {
+    background-color: #000e38;
+    transition-duration: 1s; 
+}  
+
+.catcentral {
+    background-color: $black;
+    height: 400px;
+    max-width: 100%;
+    width: 99%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .deuxcat { 
+      flex-wrap: wrap;
+    }   
+
+    .deuxcat .catgauche, .deuxcat .catdroite {
+        height: 200px;
+        width: 99%;
+       max-width: 100%;
+       background-color: $black;
+    } 
+  
+    .catgauche a, .catdroite a, .catcentral a {
+        font-size: $fsh2;
+        display:block;
+        text-align: center; 
+        line-height: 200px;
+      } 
+
+    .catcentral {
+        height: 200px;
+        margin-left: 5px;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+
+    .catgauche a, .catdroite a, .catcentral a {
+        font-size: $fsh3;
+      } 
+
+
+ }
+
+ @media screen and (min-height: 1366px) {  
+    .deuxcat .catgauche, .deuxcat .catdroite {
+       height: 1100px;
+       
+     }
+     .catcentral {
+        height: 1100px;
+    } 
+    .catgauche a, .catdroite a, .catcentral a {
+        line-height: 1100px;
+      } 
+ }
+ 

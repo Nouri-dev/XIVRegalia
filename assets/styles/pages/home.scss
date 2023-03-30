@@ -1,0 +1,290 @@
+$bleuf: #000e38; 
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.hometitre {
+   background-color: $black;
+   width: 100%;
+}
+
+.hometitrebis {
+    
+    padding: 20px;
+}
+
+.hometitre div h1, .hometitre p {
+    color: $creme;
+    text-align: center;
+}
+.hometitre div h2 {
+    margin-top: 30px;
+    margin-left: 20px;
+    color: $creme;
+    font-size: $fsh2;
+}
+.hometitre div p {
+    margin: 10px 20px 5px 20px;
+    text-align: justify;
+    padding-bottom: 20px;  
+    color: $white;
+}
+
+/*  fin hometitre 2 */
+
+
+/*  fin de la premiere section */
+
+.articleshome {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.articleshome div img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0 60px 0 50px;
+}
+.droite h3 {
+    text-align: center;
+    background-color: $creme;
+    color: $bleuf;
+}
+.gauche {
+    max-width: 50%;
+    margin-bottom: 20px;
+}
+.droite {
+    margin: 0 60px 0 50px; 
+ max-width: 50%;
+ justify-content: center;
+
+}
+.droite p {
+    margin-top: 20px; 
+    text-align: justify;
+    padding-bottom: 100px;
+}
+
+
+/* fin article 1 */
+
+
+.fondtitre {
+    width: 100%;
+    background-color: $bleuf;
+    padding: 20px;
+}
+.fondtitre h2, .fondtitre p {
+    text-align: center;
+    color: $creme;
+}
+
+
+
+.fondhome {
+    height: 400px;
+    background: url(/assets/images/versailles-fond.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -moz-background-size: cover; 
+   background-size: cover;
+}   
+
+/* fin du fond  */
+
+.basfond {
+    width: 100%;
+    background-color: $bleuf;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.basfond h3 {
+    text-align: center;
+    color: $creme;
+}
+.basfond a {
+    margin:0px auto;
+    width:100px;
+    display:block;
+}
+/* fin de la 3 section */
+
+.articledeu {
+   flex-wrap: wrap;
+    display: flex;
+    margin-bottom: 20px;
+}
+.articledeu div img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0 50px 0 60px; 
+} 
+.droitedeu {
+    max-width: 50%;
+} 
+.gauchedeu {
+   margin: 0 60px 0 50px; 
+   max-width: 50%;
+   margin-bottom: 20px;
+}
+.gauchedeu p {
+    text-align: justify;
+    padding-bottom: 100px;
+} 
+.gauchedeu h3 {
+    background-color: $creme;
+    color: $bleuf;
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* fin article 2 */
+
+.hometitredeu {
+    width: 100%;
+    background-color: $black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.hometitredeu h2 {
+    margin-left: 20px;
+    color: $creme;
+}
+.hometitredeu p {
+    margin: 10px 20px 5px 20px;
+    text-align: justify;
+    color: $white;
+}
+
+/* fin home titre 2 */
+
+.articlediv {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+  flex-wrap: wrap;
+ margin-bottom: 30px;
+}
+
+.articlediv article {
+  
+   flex-direction: column; 
+   justify-content: center;
+   margin: 0px 30px 30px 0px;
+
+ }
+.articlediv img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+.gauchetroi h3, .droitetroi h3 {
+    margin-top: 20px;
+}
+
+
+
+
+
+ @media screen and (max-width: 1024px) {
+    
+    /* article 1, 2, 3 */
+    .articleshome div img,
+     .articledeu div img,
+      .articlediv img {
+        height: 400px;
+        width: 300px;
+    }
+   
+    .droitedeu img {
+        margin-top: 30px;
+        max-width: 100%;
+    }
+    .gauchedeu {
+        margin-bottom: 30px;
+    }
+    .articlediv {
+        flex-wrap: wrap;
+    }
+    .articlediv article {
+        max-width: 100%;
+    }
+    /* article 1, 2, 3 */
+
+
+
+ 
+ 
+
+} 
+
+ @media screen and (max-width: 768px) {
+
+    /* article 1, 2 , 3*/
+    .droite p, .gauchedeu p {
+       padding-bottom: 20px;
+    }
+   .articleshome, .articledeu {
+    flex-wrap: wrap;
+   justify-content: center;
+   margin-left: 10px;
+   margin-right: 10px;
+   
+   }
+   .gauche, .droitedeu {
+     max-width: 100%;
+   }
+   .droite, .gauchedeu {
+    max-width: 100%;
+   }
+
+  .articleshome div img, .articledeu div img, .articlediv img {
+    height: 300px;
+    width: 200px;
+}
+.articlediv {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.articledeu div img {
+   margin-top: 30px;
+}
+
+
+/* article 1, 2 , 3*/
+} 
+
+
+@media screen and (max-width: 414px) {
+/* article 1, 2 */
+    .gauche, .droitedeu {
+    
+        max-width: 100%;
+       }
+       .droite, .gauchedeu {
+        max-width: 100%;
+       }
+/* article 1, 2 */
+
+}
+
+
+
+
+

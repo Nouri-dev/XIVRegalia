@@ -1,0 +1,100 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.registertitre {
+    background-color: $black;
+    padding: 30px;
+} 
+.registertitre h1 {
+    text-align: center;
+    color: $creme;
+    word-wrap: break-word;
+}
+
+.registercorp {
+    background: linear-gradient(200deg, $bleuf, $rouge);
+    padding-bottom: 90px;
+   
+}
+.registercorp label {
+     width: 100%;
+	font-size: $fsh4;
+    color: $white;
+    margin-bottom: 5px;  
+
+} 
+
+.registercorp input {
+   background-color: #000;
+   color: $white;
+   border: $white 1px solid;
+   border-radius: 3px; 
+   padding: 5px 20px 5px 20px; 
+   margin-bottom: 15px;
+ }
+.registeridentite input  {
+       appearance: none;
+       -moz-appearance: textfield;
+       &::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+       appearance: none;
+            margin:0;
+        }
+        &::-o-inner-spin-button {
+            -o-appearance: none;
+            appearance: none;
+            margin: 0; 
+        }
+    
+  
+
+} 
+
+.registercorp legend {
+    font-size: $fsh2;
+    color: $creme;
+    background-color: #000e38;
+    margin-bottom: 15px;
+}
+
+.registerdiv {
+    padding-top: 70px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.registerdiv fieldset{
+   padding-bottom: 20px;
+}
+
+@media screen and (min-height: 1366px) { 
+    .registerdiv {
+        padding-top: 300px;
+       
+    }
+    .registercorp {
+        padding-bottom: 450px;
+       
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .registerdiv {
+        margin-left: 11%;
+        margin-right: 11%;
+    }
+ }

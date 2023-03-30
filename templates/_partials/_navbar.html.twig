@@ -1,0 +1,142 @@
+<header>
+    <!--  ********************** NAVBAR UN ********************  -->
+    <nav>
+      <div class="contenu">
+
+        <div class="logo">
+        <a href="{{ path('home.index') }}"><img class="logo1" src={{ asset('build/images/xiv-logo.png') }} alt="Logo societe"></a>
+        </div>
+        <!-- hamburger responsive remplace logo et le  masque -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <div class="mobile-masque"></div>
+        </div>
+        <!-- hamburger responsive remplace logo et le  masque -->
+
+        
+        
+        <div class="connect">
+          <ul class="navbar-un">
+           
+         {% if app.user %}
+          <li>
+          <a class="user-dispa-mobile" href="{{ path('app_logout')}}">Déconnexion</a>
+          </li>
+          {% else %}
+            <li>
+             <a class="user-dispa-mobile" href="{{ path('app_login')}}">Connexion</a>
+          </li> 
+         {% endif %}
+            <li>
+             <a href="{{ path('cart_index')}}"><i class="fa-solid fa-bag-shopping"></i></a>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <li>
+               <a class="admini" href="{{ path('admin')}}">Administration</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+        
+      </div>
+
+      <!--  ********************** NAVBAR  DEUX ********************  -->
+      <div class="s-deux">
+
+        <div class="titre">
+          <a href="{{ path('home.index') }}">XIV REGALIA</a>
+        </div>
+
+      </div>
+
+
+      <!--  ********************** NAVBAR  TROIS PC et mobile ********************  -->
+
+      <div class="s-trois">
+
+        <div class="navig">
+          <!-- ****** croix femrture nav mobile ********* -->
+          <div class="mobile-fermeture">
+            <span class="croix-f-un"></span>
+            <span class="croix-f-deux"></span>
+          </div>
+          <!-- ****** croix femrture nav mobile ********* -->
+
+          <ul class="navbar-trois">
+
+            <li>
+              <a href="{{ path('app_mencategories') }}">HOMME <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="{{ path('app_womencategories') }}">FEMME <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="{{ path('app_childrencategories') }}">ENFANT <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="{{ path('app_jewelerycategories') }}">BIJOUX & MONTRES <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="{{ path('app_story') }}">NOTRE UNIVERS XIV <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            {% if app.user %}
+            <li>
+              <a href="{{ path('profile_index')}}">MON COMPTE XIV <i class="fa-solid fa-angle-right"></i></a>
+            </li>
+             {% endif %}
+            <!-- ***************** Partie mobile invinsible sur PC -->
+        {% if app.user %}
+            <li class="bouton-mobile-invisible-pc">
+               <a href="{{ path('app_logout')}}">Déconnexion</a>
+          </li>
+        {% else %}
+            <li class="bouton-mobile-invisible-pc">
+              <a href="{{ path('app_login')}}">Connexion</a>
+            </li>
+        {% endif %}
+            <!-- ***************** Partie mobile invinsible sur PC -->
+          </ul>
+          <!-- ******************* Les reseaux sociaux -->
+          <div class="reseaux-sociaux">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" target="bank"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/?lang=fr" target="bank"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/?hl=fr" target="bank"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                 <a href="https://www.pinterest.fr" target="bank"><i class="fa-brands fa-pinterest"></i></a>
+              </li>
+            </ul>
+             <!-- ******************* Les reseaux sociaux -->
+          </div>
+        </div>
+      </div>
+
+  {% if app.user and app.user.isVerified == false %}
+			<div class="alert alert-warning alert-dismissible" role="alert">
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				<div class="alert-message">
+					<strong>Votre compte n'est pas encore activé.</strong>
+					<a href="{{ path('resend_verif') }}" class="aFlashNav">Envoyer le lien d'activation par mail</a>
+				</div>
+			</div>
+		{% endif %}   
+
+
+    
+    </nav>
+
+
+</header>
+
+
+  

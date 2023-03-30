@@ -1,0 +1,200 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.comptetitre, .modifcomptetitre, .comptepasstitre {
+    background-color: $black;
+    padding: 30px;
+   
+   
+} 
+.comptetitre h1, .modifcomptetitre h1, .comptepasstitre h1{
+    text-align: center;
+    color: $creme;
+    word-wrap: break-word;
+}
+
+.comptemain {
+    background: linear-gradient(200deg, $bleuf, $rouge);
+    padding-bottom: 20px;
+}
+.comptedivhaut {
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: $bleuf;
+   border: #000 5px solid;
+   border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 10px; 
+    padding-top: 10px;
+    
+}
+
+.comptedivhaut p {
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    
+}
+
+.comptefinbouton{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+
+.comptefinbouton div {
+   margin-bottom: 50px;
+}
+/*        compte page index   profil      */
+
+
+.modifcomptediv {
+   background: linear-gradient(150deg, $bleuf, $rouge);
+    padding-bottom: 100px;
+    
+}
+
+.modifcompteform {
+    background-color: $white;
+    text-align: center;
+   margin-top: 50px;
+   border-radius: 9px;
+    margin-left: 15%;
+    margin-right: 15%;
+ 
+}  
+.modifcompteform p {
+   padding-bottom: 15px;
+ 
+ 
+}  
+.modifbouton {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    
+}
+
+/*  page edit profil */
+
+.editpassdiv {
+    background: linear-gradient(200deg, $bleuf, $rouge);
+    padding-bottom: 100px;
+}
+.formeditpass {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  
+}
+.editpasscompteform {
+    background-color: $white;
+    text-align: center;
+   margin-top: 50px;
+   border-radius: 9px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 20px;
+ 
+}  
+.editpasscomptecompteform p {
+   padding-bottom: 15px;
+ }  
+
+
+/*  page edit pass avec du boostrap */
+
+
+ /* edit profil form */
+ 
+.modifcompteform label, form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .modifcompteform  {
+   
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+         -webkit-appearance: none; 
+         appearance: none;
+        margin: 0;
+    }
+    appearance: none;
+  }
+  
+  .formedit {
+    font-size: 16px;
+    padding: 1px 3px 3px 1px;
+    margin-top: 15px;
+    border: #000 3px solid;
+  }
+  
+  .formedit label, form{
+    font-size: 16px;
+    font-weight: 600;
+   
+  }
+  /* edit profil form */
+
+
+@media screen and (min-height: 1366px) {
+
+    .comptedivhaut {
+         margin-top: 300px; 
+         padding-bottom: 80px;
+         padding-top: 80px;
+    }
+    .comptefinbouton{
+      
+        margin-top: 250px;
+        margin-bottom: 600px;
+    }
+
+   /*        compte page index   profil      */
+
+
+    .modifcomptediv {
+        padding-bottom: 300px;
+    }
+    .modifcompteform {
+        margin-top: 250px;
+    }
+    .modifbouton {
+       margin-top: 200px;
+       margin-bottom: 100px;
+    }
+
+    /*  page edit profil */
+
+    .editpassdiv {
+       padding-bottom: 700px;
+    }
+
+    .editpasscompteform {
+        margin-top: 400px;
+        padding-bottom: 50px;
+    }
+    
+ }

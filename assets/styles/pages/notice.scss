@@ -1,0 +1,58 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.mentionTitre, .pdcTitre {
+    background-color: $black;
+    padding: 30px;
+   
+   
+} 
+.mentionTitre h1, .pdcTitre h1 {
+    text-align: center;
+    color: $creme;
+    word-wrap: break-word;
+}
+
+.mentionDiv, .pdcDiv {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.mentionDiv h2, .pdcDiv h2 {
+   word-wrap: break-word;
+   background-color: $black;
+   color: $creme;
+   font-weight: 900;
+   margin-top: 70px;
+   margin-bottom: 20px;
+}
+
+.mentionIntro {
+    font-weight: 700;
+}
+
+@media screen and (min-height: 1366px) { 
+    .mentionDiv {
+       margin-bottom: 650px;
+    }
+
+    .pdcDiv {
+       margin-bottom: 280px;
+    }
+ }

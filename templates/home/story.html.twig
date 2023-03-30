@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UNIVERS XIV | XIV REGALIA{% endblock %}
+
+{% block body %}
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+	<main>
+
+		<section class="storyTitre">
+			<h1>UNIVERS XIV</h1>
+		</section>
+
+
+		<section class="storyHistoire">
+			<h2>Qui somme nous ?</h2>
+            <div class="storyDivUn">  
+                <div>
+			    <h3>Notre histoire</h3>
+			    <P>Passionés d'Histoire, l'idée de notre marque nous est venue après un week-end au Chateau de Versailles sur les pas du plus grand monarque de France. La décoration du chateau ainsi que de ses jardins,
+				 et la vision des costumes de cette époque nous ont immédiatement inspirés, et de la est sortie notre première production de vêtements aux 
+				noms appartenant aux personnages ayant rythmé la vie de la cour de Versailles au 17ème siècle.
+				Nous avons décidé de mixer les vêtements tendances du moment avec des inspirations du 17ème siècle notamment en terme de couleur (bleu et or principalement) mais également en utilisant des matières très utilisées durant cette période à l'instar du velour, du satin et de la soie.
+				Nous souhaitons, par cette collection, donner l'envie aux personnes de découvrir cette partie de l'Histoire de France.</P>
+                </div>
+
+                 <div>
+                 <img src={{ asset('build/images/univers/statue-louisXIV.jpg') }} alt="Représentation de Louis XIV">
+                 </div>
+
+            </div>
+
+            <div class="storyDivDeux"> 
+                <div> 
+			    <h3>Ecologie</h3>
+                <p>Très sensibles à la cause écologique, nous avons décidés de reverser 5% de chacun de nos produits vendus à une association de protection de l'environnement. 
+				Egalement, nos produits sont conçus en France afin de limiter au maximum notre emprunte carbone. De même, nous apportons une attention particulière au respect de l'environnement dans notre chaine de production et limitons ainsi fortement l'usage de composants polluants. </p>
+                </div>
+
+                <div>
+                <img src={{ asset('build/images/univers/ecologie.jpg') }} alt="Image qui représente une forêt">
+                </div>
+            </div>
+		</section>
+
+		<section class="storyCadeau">
+			<h2>Tentez de gagner un week-end avec XIV REGALIA</h2>
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src= {{ asset('build/images/univers/versailles.jpg') }} class="d-block w-100" alt="Chateau de versailles">
+					</div>
+					<div class="carousel-item">
+						<img src= {{ asset('build/images/univers/versailles-jardin.jpg') }}  class="d-block w-100" alt="Jardin de versailles">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+            <p>Pour tenter de gagner un week-end à Versailles (une nuit d'hotel et visite du Chateau inclue pour deux personnes), il vous suffit de poster sur votre Instagram votre plus belle photo avec l'une de nos pièce portée et de nous identifier dessus.
+			<br>La photo ayant le plus de like permettra à son propritaire de remporter le week-end !*
+			<br>
+			<br>
+			<br>*Date de fin : 31 décembre </p>
+
+
+		</section>
+
+	</main>
+
+
+{% endblock %}

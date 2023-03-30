@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CONTACT | XIV REGALIA{% endblock %}
+
+{% block body %}
+
+	<main>
+		<section class="contactTitre">
+			<h1>Contact XIV REGALIA</h1>
+		</section>
+
+    {% for message in app.flashes('warning') %}
+            <div class="alert alert-warning">
+                {{ message }}
+            </div>
+    {% endfor %}
+
+		<section class="contactCorp">
+			<h2>Nous contacter</h2>
+
+			<div class="contactUn">
+				{{ form_start(contactFormulaire) }}
+				<div class="contactDeux">
+					<p>{{ form_row(contactFormulaire.name , {'attr': {'class': 'nameCont'}}) }}</p>
+					<p>{{ form_row(contactFormulaire.email , {'attr': {'class': 'nameCont'}}) }}</p>
+				</div>
+				<p>{{ form_row(contactFormulaire.content , {'attr': {'class': 'contentCont'}}) }}</p>
+
+			</div>
+
+			<div class="contactTrois">
+				<button type="submit" class="bouttonblack">Envoyer</button>
+			</div>
+
+		</section>
+
+		{{ form_end(contactFormulaire) }}
+
+	</main>
+
+{% endblock %}

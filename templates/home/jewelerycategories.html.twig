@@ -1,0 +1,65 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BIJOUX & MONTRES | XIV REGALIA{% endblock %}
+
+
+{% block body %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+
+    <main>
+
+	
+		<section>
+			<div class="cattitre">
+				<h1>BIJOUX & MONTRES</h1>
+				<p>Découvrez notre large gamme de bijoux et de montres</p>
+			</div>
+
+
+
+			
+        <div class="deuxcat">
+           {% for category in categories %}
+			   {% if category.name == 'Bijoux & Montres HOMME' %} 
+		    <div class="catgauche">
+			    <a href="{{ path('categories_list', {slug: category.slug}) }}">{{ category.name }}</a>
+            </div>
+
+			{% else %}
+			{{ category.name == null }}
+            {% endif %}
+            {% endfor %}  
+
+
+            {% for category in categories %}
+			   {% if category.name == 'Bijoux & Montres FEMME' %} 
+			<div class="catdroite">
+			    <a href="{{ path('categories_list', {slug: category.slug}) }}">{{ category.name }}</a>
+            </div>
+
+			{% else %}
+			{{ category.name == null }}
+            {% endif %}
+            {% endfor %} 
+
+        </div>
+
+
+        </section>
+
+
+	</main>
+{% endblock %}  

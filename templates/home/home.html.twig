@@ -1,0 +1,154 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil | XIV REGALIA{% endblock %}
+
+{% block body %}
+
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+	{# fin carousel #}
+
+	<main>
+		<section class="hometitre">
+			<div class="hometitrebis">
+				<h1>DÉCOUVREZ LA COLLECTION XIV REGALIA</h1>
+
+			</div>
+			<div>
+				<h2>Nec pluribus impar | À nul autre pareil</h2>
+				<p>Entrez dans l'univers XIV REGALIA et découvrez nos plus belles pièces inspirées de l'époque du Grand Siècle ! Nos pièces aux inspirations de cette époque sont écoresponsables et sur chaque produit acheté, 5% du prix est reversé à une association de protection de l'environnement. 
+				<br>Visitez notre page "Univers XIV" pour en savoir plus sur l'histoire de ce siècle ayant marqué l'histoire de France...
+				</p>
+			</div>
+		</section>
+
+		{# fin 1 section  #}
+
+		<article class="articleshome">
+
+			<div class="gauche">
+				<img src= {{ asset('build/images/femme/robe-grise-femme-xiv.jpg') }} alt="Robe grise anthracite pour femme"> 
+			</div>
+
+			<div class="droite">
+				<h3>Decouvrez notre produit phare pour Elle</h3>
+
+				<p>Notre robe grise anthracite "Olympe" du prénom de la première favorite du roi, a obtenue les faveurs du public car elle est devenue en l'espace de peu de temps notre pièce la plus vendue en France.</p>
+
+				<a class="bouttonblack" href="/produits/olympe">Acheter</a>
+			</div>
+		</article>
+
+		{# fin 1 article #}
+
+		<section class="fondtitre">
+			<div class="fondun">
+				<h2>Découvrez nos cadeaux</h2>
+			</div>
+			<div>
+				<p>Visitez notre page "Univers XIV" et tentez de gagner un week-end au Chateau de Versailles.</p>
+			</div>
+		</section>
+
+		{# fin de la 2eme section  #}
+
+
+		<div class="fondhome"></div>
+
+		{# fin du fond  #}
+
+		<section class="basfond">
+			<div class="bastitre">
+				<h3>Nec pluribus impar</h3>
+			</div>
+			<div>
+				<a class="bouttonred" href="/UNIVERS-XIV">Découvrir</a>
+			</div>
+		</section>
+
+		{# fin de la 3 section #}
+
+
+		<article class="articledeu">
+
+			<div class="gauchedeu">
+				<h3>Decouvrez notre produit phare pour Lui</h3>
+				<p>Notre veste en jean "Jules" du prénom du principal ministre de l'Etat, est rapidement devenue le produit emblématique de notre collection Homme.</p>
+				<a class="bouttonblack" href="/produits/jules">Acheter</a>
+			</div>
+
+			<div class="droitedeu">
+				<img src= {{ asset('build/images/homme/veste-jean-homme-2.jpg') }} alt="Veste en jean pour homme"> 
+			</div>
+
+		</article>
+
+		{# fin article 2 #}
+
+		<section class="hometitredeu">
+			<div>
+				<h2>Nos autres meilleures ventes</h2>
+				<p>Notre montre "Philippe" et notre paire de souliers "Louis" sont nos meilleures ventes dans leur catégorie respective.</p>
+			</div>
+		</section>
+
+		{# fin hometitre 2 #}
+
+
+		
+
+		
+
+		<div class="articlediv">
+		 
+		    <article class="gauchetroi">
+
+				    <div>
+						<img src= {{ asset('build/images/bijoux/montre-marron-homme.jpg') }} alt="Montre marron et or pour homme"> 
+					</div>
+
+					<div>
+						<a class="bouttonblack" href="/produits/philipe">Decouvrir</a>
+					</div>
+					 
+					 <div>
+					    <h3>Voir détail modèle "Philippe" </h3>
+					 </div>
+		            
+			</article>	
+
+			<article class="droitetroi">
+            
+                    <div>
+					<img src= {{ asset('build/images/enfant/chaussure-marron-enfant.jpg') }} alt="Chaussures marron pour enfant"> 
+					</div>
+
+					<div>
+						<a class="bouttonblack" href="/produits/louis">Decouvrir</a>
+					</div>
+
+                     <div>
+					   <h3>Voir détail modèle "Louis"</h3>
+					 </div>
+		           
+			</article>
+
+		</div>
+
+	
+
+
+</main>
+{% endblock %}

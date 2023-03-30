@@ -1,0 +1,131 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.paycomfirmtitre {
+    background-color: $black;
+    padding: 30px;
+   
+   
+} 
+.paycomfirmtitre h1 {
+    text-align: center;
+    color: $creme;
+}
+
+/* titre */
+.paycomfirmhaut {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.paycomfirmhaut h2{
+    background-color: $bleuf;
+    color: $creme;
+    margin-bottom: 30px;
+}
+
+.paycomfirmhaut img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 80px;
+}
+/* section du haut */
+
+.paycomfirmbas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+   
+}
+
+
+.paycomfirmleft {
+     text-align: center; 
+} 
+.paycomfirmleft h3, .paycomfirmright h3 {
+   background-color: $black;
+   color: $creme;
+   margin-bottom: 30px;
+
+}
+.paycomfirmleft p, .paycomfirmright p {
+   font-size: 16px;
+}
+/* div gauche */
+
+.paycomfirmright {
+    text-align: center; 
+} 
+
+.paycomfirmimg {
+    display: flex;
+   justify-content: center;
+}
+.paycomfirmimg p {
+    word-wrap: break-word;
+    width: 100px;
+}
+.paycomfirmtotal {
+    margin-top: 50px;
+    background-color: $rouge;
+    color: $white;
+  
+}
+
+/* div droite */
+
+
+#paycomfirmbout {
+    text-align: center; 
+    margin-bottom: 100px;
+}
+#paycomfirmbout a {
+  color: $white;
+}
+/* id bouton */
+
+/* section du bas */
+
+@media screen and (min-height: 1366px) {
+    .paycomfirmhaut {
+       
+        margin-top: 150px;
+        margin-bottom: 250px;
+       
+    }
+
+    .paycomfirmbas {
+      
+        margin-bottom: 300px;
+    }
+    #paycomfirmbout {
+       
+        margin-bottom: 450px;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+    .paycomfirmhaut img {
+        width: 100px;
+        height: 100px;
+       
+    }
+  }

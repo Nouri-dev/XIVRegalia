@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plan du site | XIV REGALIA{% endblock %}
+
+
+{% block body %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+
+
+<main class="sitemapMain">
+
+  <section class="sitemapTitre">
+    <h1>Plan du site</h1>
+  </section>
+  
+  
+  <section class="sitemapsection">
+    <h2>HOMME</h2>
+    <div>
+    <p>Prêt-à-porter</p>
+    <p>Accessoires</p>
+    <p>Chaussures</p>
+    </div>
+  </section>
+
+
+  <section class="sitemapsection">
+    <h2>FEMME</h2>
+    <div>
+    <p>Prêt-à-porter</p>
+    <p>Accessoires</p>
+    <p>Chaussures</p>
+    </div>
+  </section>
+
+
+  <section class="sitemapsection">
+    <h2>ENFANT</h2>
+    <div>
+    <p>Prêt-à-porter</p>
+    <p>Accessoires</p>
+    <p>Chaussures</p>
+    </div>
+  </section>
+
+
+  <section class="sitemapsection">
+    <h2>BIJOUX & MONTRES</h2>
+    <div>
+    <p>BIJOUX & MONTRES HOMME</p>
+    <p>BIJOUX & MONTRES FEMME</p>
+    </div>
+  </section>
+
+  <section class="sitemapsection">
+    <h2>NOTRE UNIVERS XIV</h2>
+  </section>
+
+  <section class="sitemapsection">
+    <h2>MON COMPTE XIV</h2>
+  </section>
+
+  <section class="sitemapsection">
+    <h2>Mentions légales</h2>
+    <div>
+    <p>Politique de confidentialité</p>
+    <p>Mentions légales</p>
+    </div>
+  </section>
+
+
+  <section class="sitemapsection">
+    <h2>Services</h2>
+    <div>
+    <p>Notre univers XIV</p>
+    <p>Plan du site</p>
+    </div>
+  </section>
+
+
+  <section class="sitemapsection">
+    <h2>Contactez-nous</h2>
+    <div>
+    <p>Nous envoyer un mail</p>
+    </div>
+  </section>
+
+
+
+
+
+</main>
+{% endblock %}

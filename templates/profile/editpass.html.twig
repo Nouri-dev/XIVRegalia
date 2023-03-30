@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Modification du mot de passe de {{ app.user.firstname }} {{ app.user.lastname }} | XIV REGALIA{% endblock %} 
+
+{% block body %}
+
+<main>
+         {# {% for message in app.flashes('warning') %}
+			<div class="alert alert-warning mt-4">
+				{{ message }}
+			</div> 
+         {% endfor %} #}
+
+
+        <section class="comptepasstitre">
+			<h1>Modification du mot de passe de {{ app.user.firstname }}</h1>
+        </section>
+
+		<div class="editpassdiv"> 
+	        
+		     {{ form_start(form ) }}
+			 <div class="editpasscompteform">
+	
+				<p>{{ form_row(form.plainPassword, {'attr': {'class': 'formeditpass'}} ) }}</p>
+				<p>{{ form_row(form.newPassword, {'attr': {'class': 'formeditpass'}}) }}</p>
+		       
+		  		
+             </div>
+             
+
+            <div class="modifbouton">
+			   <button type="submit" class="bouttonmodifier" >Modifier</button>
+		    </div>
+           {{ form_end(form) }}
+
+
+		</div>
+
+
+
+</main>
+
+{% endblock %}

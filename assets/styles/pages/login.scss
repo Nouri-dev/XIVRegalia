@@ -1,0 +1,202 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.logintitre, .resetpassun {
+    background-color: $black;
+    padding: 30px;
+} 
+.logintitre h1, .resetpassun h1 {
+    text-align: center;
+    color: $creme;
+    word-wrap: break-word;
+}
+/* avec les class de resetpass  */
+
+.logincorp {
+    background: linear-gradient(120deg, $bleuf, $rouge);
+    padding-bottom: 90px;
+}
+.loginmilieu {
+    background-color: $white;
+    margin-top: 80px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 60px;
+    border-radius: 5px;
+} 
+
+.loginmilieu label, form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginmilieu label {
+    margin-top: 15px;
+    color: $bleuf;
+    font-size: $fsh3;
+    font-weight: 700;
+
+}
+
+.loginmilieu input {
+    margin-top: 10px;
+    border: $black 2px solid;
+    border-radius: 10px;
+    padding: 4px 15px 4px 15px;
+}
+
+.loginmail {
+    margin-bottom: 10px;
+}
+.loginmailpass{
+    margin-bottom: 20px;
+}
+.loginbouton {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;   
+   
+}
+
+.loginbouton a {
+   margin-top: 5px;
+   margin-bottom: 15px;
+   color: #E7DAC7;
+   font-size: $fsh4;
+}
+.loginbouton a:hover {
+  color: $black;
+}
+
+.loginfin {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.loginfin a {
+    margin-left: 3px;
+    font-size: $fsh4;
+    font-weight: 600;
+}
+.loginfin a:hover{
+   color: $black;
+}
+/*  security login  */
+
+.resetuncorp  {
+    
+    background: linear-gradient(120deg, $bleuf, $rouge);
+    padding-bottom: 200px;
+    padding-top: 160px;
+}
+
+.resetundiv label, form {
+    display: flex;
+    flex-direction: column;
+}
+.resetundiv label {
+    font-size: $fsh3;
+    font-weight: 700;
+} 
+.passformreset {
+    margin-top: 5px;
+   border: $black 3px solid;
+   padding: 4px 15px 4px 15px;
+}  
+.resetundiv {
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+    background-color: $white;
+     margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 80px; 
+    border-radius: 5px;
+}
+.resetundiv button {
+    margin-top: 30px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+/* security  resetpass et resetpass request mm class*/
+
+
+
+@media screen and (min-height: 1366px) {
+    .loginmilieu{
+     margin-top: 400px;
+     padding-bottom: 150px;
+    } 
+    .logincorp {
+       
+        padding-bottom: 850px;
+    }
+     /* login  */
+
+     .resetuncorp  {
+        padding-top: 650px;
+        padding-bottom: 900px;
+      }
+
+      .resetundiv button {
+        margin-top: 90px;
+      
+    }
+    .passformreset {
+       margin-top: 15px;
+     }
+
+     /* security resetpass et resetpass request mm class*/
+
+ }
+
+
+
+@media screen and (max-width: 768px) {
+
+    .loginmilieu{
+        margin-left: 10vw;
+        margin-right: 10vw; 
+      
+    } 
+
+    .loginbouton {
+        text-align: center;
+       margin-left: 1vw;
+       margin-right: 1vw;
+    }
+
+    /* login  */
+
+
+    .resetundiv {
+       margin-left: 5%;
+       margin-right: 5%;
+    } 
+    .resetundiv button {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    /* security resetpass et resetpass request mm class*/
+ }

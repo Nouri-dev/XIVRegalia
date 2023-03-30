@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification du compte de {{ app.user.firstname }} | XIV REGALIA{% endblock %}
+
+
+{% block body %}
+	
+	
+	<main>
+	 
+
+
+		<section class="modifcomptetitre">
+			<h1>Modification du compte de {{ app.user.firstname }} {{ app.user.lastname }}</h1>
+        </section>
+
+
+        <div class="modifcomptediv"> 
+	        
+		     {{ form_start(form ) }}
+			 <div class="modifcompteform">
+	
+				<p>{{ form_row(form.lastname, {'attr': {'class': 'formedit'}} ) }}</p>
+				<p>{{ form_row(form.firstname, {'attr': {'class': 'formedit'}}) }}</p>
+		        <p>{{ form_row(form.address, {'attr': {'class': 'formedit'}}) }}</p>
+			    <p>{{ form_row(form.city, {'attr': {'class': 'formedit'}}) }}</p>
+			    <p>{{ form_row(form.zipcode, {'attr': {'class': 'formedit'}}) }}</p>
+			    <p>{{ form_row(form.country, {'attr': {'class': 'formedit'}}) }}</p>
+			    <p>{{ form_row(form.phone, {'attr': {'class': 'formedit'}}) }}</p>
+		  		
+             </div>
+             
+
+         <div class="modifbouton">
+			<button type="submit" class="bouttonmodifier" >Modifier</button>
+		 </div>
+           {{ form_end(form) }}
+
+
+		</div>
+
+		 
+
+
+	
+        
+	</main>
+{% endblock %}

@@ -1,0 +1,46 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+.mainErrorPage {
+    background-color: $black;
+    padding-bottom: 310px;
+}
+.mainErrorPage h1, .mainErrorPage p {
+   color: $creme;
+   text-align: center;
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+.mainErrorPage h1 {
+   padding-top: 200px;
+   margin-bottom: 100px;
+
+}
+
+@media screen and (min-height: 1366px) {
+
+    .mainErrorPage h1 {
+        padding-top: 700px;
+       
+     }
+
+
+    .mainErrorPage {
+        background-color: $black;
+        padding-bottom: 1000px;
+    }
+ }

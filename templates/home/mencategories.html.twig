@@ -1,0 +1,82 @@
+{% extends "base.html.twig" %}
+
+{% block title %}HOMME | XIV REGALIA{% endblock %}
+
+
+{% block body %}
+
+ <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src= {{ asset('build/images/doudoune-vert-f.jpg') }} class="d-block w-100" alt="Doudoune verte pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src= {{ asset('build/images/montre-or-f.jpg') }}  class="d-block w-100" alt="Montre en or pour femme">
+			</div>
+			<div class="carousel-item">
+				<img src={{ asset('build/images/montre-or-homme.jpg') }}  class="d-block w-100" alt="Montre en or pour homme">
+			</div>
+		</div>
+	</div> 
+
+
+    <main>
+
+		<section>
+		
+			<div class="cattitre">
+				<h1>HOMME</h1>
+				<p>Découvrez nos produits dans nos différentes catégories Homme</p>
+			</div>
+		
+			
+        <div class="deuxcat">
+           {% for category in categories %}
+			   {% if category.name == 'Prêt-à-porter HOMME' %} 
+
+
+			<div class="catgauche">
+			      <a href="{{ path('categories_list', {slug: category.slug}) }}">{{ category.name }}</a>
+				  
+            </div>
+
+			{% else %}
+			{{ category.name == null }}
+            {% endif %}
+            {% endfor %}  
+
+
+            {% for category in categories %}
+			   {% if category.name == 'Accessoires HOMME' %} 
+			<div class="catdroite">
+			      <a href="{{ path('categories_list', {slug: category.slug}) }}">{{ category.name }}</a>
+				 
+            </div>
+
+			{% else %}
+			{{ category.name == null }}
+            {% endif %}
+            {% endfor %} 
+
+
+		</div>	
+
+
+            {% for category in categories %}
+			   {% if category.name == 'Chaussures HOMME' %} 
+			<div class="catcentral">
+			    <a href="{{ path('categories_list', {slug: category.slug}) }}">{{ category.name }}</a>
+            </div>
+
+			{% else %}
+			{{ category.name == null }}
+            {% endif %}
+            {% endfor %} 
+
+			
+		</section>
+
+
+
+	</main>
+{% endblock %}  

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier | XIV REGALIA{% endblock %}
+
+{% block body %}
+    
+     <section class="carttitre">
+        <h1>Panier XIV REGALIA</h1>
+    </section>
+
+    <main class="maincart">
+           {% for element in dataPanier %}
+         <section class="cartsectionun">
+               <div class="cartimg">
+                   <img src="/uploads/{{ element.product.image }} " alt="{{ element.product.name }}" loading="lazy">
+                   <h4>{{ element.product.name }}</h4>
+                   <p>{{ element.product.price / 100 }} €</p>
+               </div>
+
+               <div class="cartquantite">
+                    <a href="{{path("cart_remove", {id: element.product.id})}}">-</a>
+
+                    <p>{{ element.quantity }}</p>
+
+                    <a href="{{path("cart_add", {id: element.product.id})}}">+</a>
+               </div>
+
+               <div class="cartdelart">
+                    <a href="{{path("cart_delete", {id: element.product.id})}}">Supprimer</a>
+                            
+                    <p>{{ element.quantity * element.product.price / 100}} €</p>
+               </div>
+
+                {% else %}
+                <div class="sipaniervide">
+                    <p>Votre panier est vide !</p>
+                </div>
+            {% endfor %}
+         </section>
+
+
+
+
+
+
+         <section class="cartderniersection">
+             <div class="cartvider"> 
+              <h2>Vider le panier</h2>
+              <a href="{{path("cart_delete_all")}}" class="bouttonred">Vider</a>
+            </div>
+            
+            <div class="carttotalfin">
+               <h2>Total</h2>
+               <p>{{ total / 100}} €</p>
+            </div>
+             
+             <div class="cardboutonfin">
+               <a href="{{ path("payment_index") }}" class="bouttoncartcommand">Commander</a>
+            </div>
+
+                        
+        </section>
+          
+    </main>
+
+   
+    
+{% endblock %}

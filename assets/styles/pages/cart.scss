@@ -1,0 +1,234 @@
+$bleuf: #000e38;
+$white: #ffff;
+$black: #000;
+$creme: #E7DAC7;
+$rouge: #850606;
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+
+
+.carttitre {
+    background-color: $black;
+    padding: 30px;
+   
+   
+} 
+.carttitre h1 {
+    text-align: center;
+    color: $creme;
+}
+.maincart {
+    background-color: $creme;  
+    margin: 90px 30px 90px 30px;
+    box-shadow: 0 0 5px 20px $creme;
+}
+/*  1er section */
+.cartsectionun {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 2px;
+    justify-content: space-between;
+} 
+/* cart image */
+.cartimg {
+   margin-left: 20px;
+   width: 100px;
+}
+.cartimg h4 {
+   /*  overflow: scroll; */
+    word-break: break-all;
+    word-wrap: break-word;  
+}
+.cartimg p {
+  font-weight: 700;
+}
+.cartimg img {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+/*  cart quantite */
+.cartquantite {
+    margin-top: 50px; 
+    display: flex;
+    border: $bleuf solid 2px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cartquantite  p {
+    margin-left: 10px; 
+    margin-right: 2px;
+    padding-right: 3px;
+    font-weight: 600;
+}
+.cartquantite  a {
+    margin-left: 7px;
+    color: $bleuf;
+    font-weight: 400;
+
+} 
+/* cart delete artccle */
+.cartdelart {
+    margin-right: 20px;
+}
+.cartdelart a {
+  
+    color: $rouge;
+    font-size: $fsh4;
+}
+.cartdelart p {
+    margin-top: 60px;
+}
+/* cartvider */
+.cartderniersection {
+    border-top: $bleuf 2px solid; 
+    width: 100%;
+}
+.cartvider {
+   height: 70px;
+   margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $bleuf 2px solid;
+    padding-bottom: 2px;
+}
+.cartvider h2 {
+    color: $bleuf;
+    margin-left: 20px;
+    font-weight:700;
+    
+}
+
+.cartvider a {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: $fsh4;
+    color: $white;
+    background-color: $rouge;
+    font-weight:800;
+    border-radius: 3px;
+    text-align: center;
+    height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* cart total fin */
+
+.carttotalfin {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: $bleuf 2px solid;
+    padding-bottom: 2px;
+    margin-top: 20px;
+}
+
+.carttotalfin h2 {
+   margin-left: 20px;
+   font-weight: 700;
+   color: $bleuf;
+}
+
+.carttotalfin p {
+    margin-top: 10px;
+  font-weight: 600;
+   margin-right: 20px;
+}
+/*  cart boutton de fin */
+.cardboutonfin {
+    margin-top: 80px;
+    height: 160px;
+   
+    justify-content: center;
+    text-align: center;
+}
+
+.cardboutonfin a {
+   font-size: $fsh4;
+   color: $white;
+}
+
+/*  condition si le paniar est vide */
+
+.sipaniervide {
+    text-align: center;
+}
+.sipaniervide p {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   font-weight: 700;
+   color: $bleuf;
+   font-weight: 500;
+    
+}
+
+@media screen and (min-height: 1366px) {  
+
+    .maincart {
+        margin-top: 300px;
+     }
+
+    .cartsectionun {  
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    .cardboutonfin a {
+        margin-top: 250px;
+        margin-bottom: 300px;
+       
+    }
+    .cardboutonfin {
+        margin-bottom: 400px;
+       
+    }
+     .carttotalfin {
+        margin-bottom: 300px;
+    } 
+    .sipaniervide p {
+       padding-top: 290px;
+       padding-bottom: 300px;
+     }
+
+ }
+
+/*  @media screen and (max-width: 1024px) {
+ 
+    .maincart {
+        margin: unset;
+        box-shadow: none;
+     }  
+
+  }  */
+
+ @media screen and (max-width: 768px) { 
+
+    .cartvider h2 {
+       
+        font-size: $fsh3;
+    }
+
+
+
+    .carttotalfin h2 {
+       
+      font-size: $fsh3;
+     }
+
+     .maincart {
+        margin: unset;
+        box-shadow: none;
+     }  
+ }

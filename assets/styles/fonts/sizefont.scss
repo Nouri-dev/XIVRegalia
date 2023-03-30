@@ -1,0 +1,34 @@
+$fsh1: 40px;
+$fsh2: 30px;
+$fsh3: 22px;
+$fsh4: 18px;
+$fsp: 16px;
+
+h1 {
+    font-size: $fsh1;
+}
+h2 {
+    font-size: $fsh2;
+}
+h3 {
+    font-size: $fsh3;
+}
+
+h4 {
+    font-size: $fsh4;
+}
+
+p {
+    font-size: $fsp;
+}
+
+
+
+
+.paymentsecinfo h2{
+    font-size: unset;
+ }
+
+/* balise a et form, en sur-mesure  */
+
+/* le gras en sur-mesure */

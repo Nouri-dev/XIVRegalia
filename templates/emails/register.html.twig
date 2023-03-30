@@ -1,0 +1,6 @@
+<h1>Bonjour {{ user.firstname }} {{ user.lastname }}</h1>
+<p>Activez votre compte</p>
+<p>Votre inscription sur XIV REGALIA est à valider en cliquant sur le lien ci-dessous :</p>
+<p><a href="{{ absolute_url(path('verify_user', {token: token})) }}">{{ absolute_url(path('verify_user', {token: token})) }}</a></p>
+<p>Ce lien expirera dans 3 heures</p> 
+<p>XIV REGALIA boutique officiel</p>

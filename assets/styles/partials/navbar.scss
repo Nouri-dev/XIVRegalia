@@ -1,0 +1,429 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Libre+Baskerville&family=Open+Sans&family=Poppins&display=swap'); */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+     margin-bottom: 125px;
+    
+}
+nav {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    background-color: #000e38;
+    width: 100%;
+    height: 125px;  
+    
+}
+
+div>a {
+    color: #E7DAC7;
+    text-decoration: none;
+}
+.titre {
+    font-family: 'Bodoni Moda','Libre Baskerville','cursive' , serif;
+}
+
+.navbar-trois {
+    font-family: 'poppins','Open Sans' ,'cursive', sans-serif;
+}
+.navbar-un {
+    font-family: 'poppins','Open Sans' ,'cursive', sans-serif;
+}
+
+li>a {
+    color: #E7DAC7;
+    text-decoration: none;
+}
+
+li>a:hover {
+    color: #ffff;
+}
+
+ul {
+    list-style: none;
+} 
+
+
+
+/* ---------------------------- section un  --------------------------------------------------------- */
+.contenu {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    
+}
+ .logo1 {
+    max-width: 100px;
+    max-height: 100px;
+} 
+
+.logo {
+     
+    margin-left: 15px;
+   margin-top: 10px;  
+}
+
+.navbar-un {
+    display: block;
+    display: flex; 
+    margin-right: 15px;
+    margin-top: 10px; 
+}
+
+.navbar-un>li>a {
+    font-size: 15px;
+    margin: 15px; 
+}
+
+
+
+
+
+
+/* ---------------------------- section deux  ---------------------------------------------------------- */
+.s-deux {
+    margin-top: -70px; 
+}   
+
+
+.titre {
+   
+    text-align: center;
+    font-size: 23px;
+    text-decoration-line: none;
+    padding-bottom: 15px;
+    
+    
+}
+.titre a:link {
+    text-decoration: none;
+    color: #E7DAC7;
+}
+.titre a:hover {
+    text-decoration: none;
+    color: #E7DAC7;
+}
+
+/* ---------------------------- section trois  --------------------------------------------------------- */
+.s-trois {
+    display: block;
+}
+
+.navbar-trois {
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-trois>li {
+    margin: 0px 20px 0px;
+    font-size: 13px;
+}
+.navbar-trois a:link {
+    text-decoration: none;
+}
+
+/* ----------- icone fleche pc non visible -------------------------- */
+.navbar-trois>li>a>i {
+    display: none;
+}
+
+/* ----------- icone fleche pc non visible -------------------------- */
+
+
+
+/* ------ id partie mobile invisible en pc --------  */
+.bouton-mobile-invisible-pc {
+    display: none;
+}
+/* ------ id partie mobile invisible en pc --------  */
+
+
+
+/* ------------------ class reseaux sociaux invisible pc---- */
+.reseaux-sociaux{
+    display: none;
+} 
+
+/* ------------------ class reseaux sociaux invisible pc---- */
+
+
+
+/* ---------------------------- responsive tablette mobile ---------------------------------------------------- */
+
+/* -- hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+/* -- hamburger */
+
+
+/* ----- effet sombre ------------------------------ */
+.mobile-masque {
+
+    position: fixed;
+     z-index: 99; 
+    background-color: rgba(0, 0, 0, .3);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* ----- effet sombre ------------------------------ */
+
+
+
+@media screen and (max-width: 1024px) {
+    header {
+        margin-bottom: 70px;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    /* ---menu responsive --------------------- */
+    .s-trois {
+        overflow: scroll;
+        position: absolute;
+        z-index: 100; 
+        background: #E7DAC7;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-out;
+    }
+
+    /* ---menu responsive -----------------------*/
+
+
+
+    /* --  hamburger ----------------------------*/
+    .hamburger-ouvert {
+       transform: translateX(0%);
+    }
+
+    .hamburger {
+        display: block;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    .hamburger>span {
+        display: block;
+        border: none;
+        width: 30px;
+        height: 2px;
+        margin: 7px auto;
+        background-color: #E7DAC7;
+    }
+
+    /* -- hamburger -------------------------*/
+
+
+    /* ---effet sombre ---------------------------- */
+    .mobile-masque-ouvert {
+        cursor: default;
+        display: block;
+    }
+    /* ---effet sombre  --------------------------- */
+
+
+    /* Croix de fermeture ------------------- */
+    .mobile-fermeture {
+        padding: 20px;
+        margin-right: 10px;
+        margin-top: -45px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .mobile-fermeture>span {
+        display: block;
+        position: absolute;
+        border: none;
+        width: 20px;
+        height: 1.5px;
+        background-color: #000000;
+    }
+
+    .croix-f-un {
+        transform: rotate(45deg);
+    }
+
+    .croix-f-deux {
+        transform: rotate(-45deg);
+    }
+
+    /* Croix de fermeture----------------- */
+
+    .logo {
+        display: none;
+    }
+
+    .titre {
+       font-size: 21px;
+    }
+
+    .s-deux {
+        margin-top: -40px; 
+    }   
+
+    .navbar-un>li>a {
+        font-size: 17px;
+        margin: 10px;
+    }
+
+    .admini {
+        display: none;
+    }
+
+
+    .navbar-trois {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .navbar-trois>li {
+        margin: 20px;
+    }
+
+    .navbar-trois>li>a {
+
+        font-size: 15px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .navbar-trois>li>a:hover {
+        color: #ffff;
+    }
+
+    /* ----------- icone fleche mobile  visible -------------------------- */
+    .navbar-trois>li>a {
+        display: flex;
+    }
+
+    .navbar-trois>li>a>i {
+        display: block;
+        position: absolute;
+        margin-left: 70%;
+    }
+
+    /* ----------- icone fleche mobile visible -------------------------- */
+
+
+    /* ----------- Partie mobile invinsible sur PC -------------------------- */
+
+    .bouton-mobile-invisible-pc {
+        position: relative;
+        padding-top: 20%;
+        display: block;
+    }
+
+    .bouton-mobile-invisible-pc > a {
+        display: block;
+        cursor: pointer;
+        border: none;
+        padding: 20px;
+        background-color: #000e38;
+        text-align: center;
+        
+    }
+
+    .bouton-mobile-invisible-pc> a {
+        text-align: center;
+        text-decoration: none;
+        color: #FFFF !important; 
+        font-size: 17px;
+        font-weight: 500;
+    }
+     /* ----------- Partie mobile invinsible sur PC -------------------------- */
+
+
+    /* ------------- id user disparait du pc en tablette-mobile ------- */
+    .user-dispa-mobile {
+        display: none;
+    } 
+
+   /* ------------- id user disparait du pc en tablette-mobile ------- */
+    
+   /* ------------------ class reseaux sociaux visible tablette et mobi---- */
+    .reseaux-sociaux {
+        display: block;
+        position:relative;
+        margin-top: 30%;
+    }
+    .reseaux-sociaux > ul {
+        display: flex;
+       justify-content: start; 
+    }
+    .reseaux-sociaux > ul >li >a {
+       font-size: 25px;
+       color: #000e38;
+       margin: 0px 10px 0px 10px; 
+    }
+    /* ------------------ class reseaux sociaux visible tablette et mobi---- */
+}
+
+
+
+/* -----------------------------------  mobile -------------------------------------------------- */
+
+
+@media screen and (max-width: 768px) {
+    header {
+        margin-bottom: 60px;
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .s-trois {
+
+        width: 65%;
+    }
+    .navbar-trois>li>a>i {
+        display: block;
+        position: absolute;
+        margin-left: 69%;
+    }
+
+    .titre {
+        margin-top: 3px; 
+        font-size: 18px;
+    }
+
+    .navbar-un>li {
+        margin-top: -4px;
+    }
+
+    .navbar-un>li>a {
+        font-size: 14px;
+        margin: 8px; 
+    }
+
+    .hamburger>span {
+        display: block;
+        border: none;
+        width: 23px;
+        height: 1px;
+        margin: 5px auto;
+        background-color: #E7DAC7;
+    }
+    .hamburger {
+        margin-top: 9px;
+    }
+  
+
+}
